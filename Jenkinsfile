@@ -20,9 +20,7 @@ pipeline {
     }
     stage('Building Docker Image') {
       steps{
-        script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
-        }
+        sh "docker build --no-cache -t qilei2010/cicd-k8s-demo:0.2.0 ."
       }
     }
     stage('Push Image To Docker Hub') {
