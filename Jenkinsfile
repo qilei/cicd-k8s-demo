@@ -5,7 +5,7 @@ pipeline {
     dockerImage = ''
   }
   tools {
-      maven 'maven3'
+      maven 'MAVEN_HOME'
   }
   agent any
   stages {
